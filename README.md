@@ -1,6 +1,8 @@
 URL hostolni nem tudtam, hiba miatt, de  projekt localisan fut rendesen és használható.
 Ha van valami probléma vagy kérdésed keress discordon kérlek: zifer6646
 
+Pontozás szerintem: https://docs.google.com/spreadsheets/d/1_LlcHv6P4GjFlnniwrDVjJFNExpLWyHz_kJZus64-E8/edit?usp=sharing
+
 # MuzeumBelepojegyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
