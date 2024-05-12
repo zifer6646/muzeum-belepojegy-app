@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-// Define the Ticket interface
+
 export interface Ticket {
   id: string;
-  userId: string;      // User identifier who purchased the ticket
-  exhibitId: number;   // Identifier of the exhibition the ticket is valid for
-  price: number;       // Price of the ticket
-  quantity: number;    // Number of tickets purchased
-  type: string;        // Type of ticket (e.g., "adult", "student", etc.)
-  visitDate: Date | null; // Date of the visit, can be null if not specified
+  userId: string;     
+  exhibitId: number;   
+  price: number;       
+  quantity: number;    
+  type: string;        
+  visitDate: Date | null; 
 }
 
 @Injectable({
@@ -19,9 +19,8 @@ export class TicketsService {
 
   constructor(private afs: AngularFirestore) {}
 
-  // Method to add a ticket to Firestore 
+  
   addTicket(ticket: Ticket) {
-    // Handling optional visitDate with Firestore timestamp
     if (ticket.visitDate) {
       ticket.visitDate = new Date(ticket.visitDate);
     }

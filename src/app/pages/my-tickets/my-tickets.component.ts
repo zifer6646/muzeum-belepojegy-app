@@ -27,7 +27,6 @@ export class MyTicketsComponent implements OnInit {
   deleteTicket(ticketId: string) {
     this.ticketsService.deleteTicket(ticketId).then(() => {
       console.log('Ticket deleted successfully');
-      // Optionally refresh the list or show a message
     }).catch(error => {
       console.error('Error deleting ticket: ', error);
     });
@@ -36,6 +35,6 @@ export class MyTicketsComponent implements OnInit {
   formatDate(dateString: string | null): string {
     if (!dateString) return '';
     let date = parseISO(dateString);
-    return format(date, 'PPP'); // 'PPP' example format: 'Apr 29, 1453'
+    return format(date, 'PPP'); 
 }
 }

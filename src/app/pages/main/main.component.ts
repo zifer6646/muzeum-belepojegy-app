@@ -29,7 +29,7 @@ export class MainComponent implements OnInit {
       exhibititon: ['', Validators.required],
       quantity: ['', [Validators.required, Validators.min(1)]],
       visitDate: [''],
-      price: [{value: '', disabled: true}]  // Az ár mező kezdetben kikapcsolt
+      price: [{value: '', disabled: true}] 
     });
 
     this.getUserData();
@@ -64,7 +64,7 @@ export class MainComponent implements OnInit {
     if (this.ticketForm.valid && this.currentUser) {
       const formValues = {
         ...this.ticketForm.value,
-        price: this.ticketForm.get('price')?.value, // Explicit módon kiszedjük az értéket
+        price: this.ticketForm.get('price')?.value, 
         userId: this.currentUser.id,
         exhibitId: this.ticketForm.value.exhibititon,
         visitDate: this.ticketForm.value.visitDate ? new Date(this.ticketForm.value.visitDate) : null

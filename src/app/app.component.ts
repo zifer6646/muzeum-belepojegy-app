@@ -39,7 +39,6 @@ export class AppComponent implements OnInit{
     }
 
   changePage(selectedPage: string) {
-   // this.page = selectedPage;
     this.router.navigateByUrl(selectedPage);
 }
   onToggleSidenav(sidenav: MatSidenav) {

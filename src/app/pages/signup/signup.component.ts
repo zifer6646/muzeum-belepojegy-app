@@ -45,9 +45,9 @@ export class SignupComponent implements OnInit{
         this.authService.signup(email, password).then(cred => {
           console.log(cred);
           const user: User = {
-            id: cred.user?.uid as string, // Ensure `uid` is not null or undefined before casting.
+            id: cred.user?.uid as string, 
             email: email,
-            username: email.split('@')[0], // Assuming email is always valid here since checked above.
+            username: email.split('@')[0], 
             name: {
               firstName: firstName,
               lastName: lastName

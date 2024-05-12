@@ -5,7 +5,7 @@ export interface Ticket {
   price: number;
   quantity: number;
   type: string;
-  visitDate: Date | null; // make it null if it can be optional
+  visitDate: Date | null; 
 }
 
   
