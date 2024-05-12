@@ -1,0 +1,19 @@
+<ng-content></ng-content>
+
+<div class="main_component">
+    <mat-card *ngIf="user">
+      <mat-card-header>
+        <mat-card-title>Profil</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="profile-info">
+          <p><mat-icon>person</mat-icon> <strong>Felhasználónév:</strong> {{ user.username }}</p>
+          <p><mat-icon>email</mat-icon> <strong>Email cím:</strong> {{ user.email }}</p>
+          <p><mat-icon>account_circle</mat-icon> <strong>Keresztnév:</strong> {{ user.name.firstName }}</p>
+          <p><mat-icon>account_circle</mat-icon> <strong>Vezetéknév:</strong> {{ user.name.lastName }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  

@@ -1,0 +1,36 @@
+<div class="ticket-form-container">
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Jegy típusa</mat-label>
+      <mat-select formControlName="type">
+        <mat-option value="Felnőtt">Felnőtt</mat-option>
+        <mat-option value="Diák">Diák</mat-option>
+        <mat-option value="Csoport">Csoport</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Kiállítás</mat-label>
+      <mat-select formControlName="exhibititon">
+        <mat-option value="Ókori kiállítás">Ókori kiállítás</mat-option>
+        <mat-option value="Európai művszetek">Európai művszetek</mat-option>
+        <mat-option value="Róma fénykora">Róma fénykora</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mennyiség</mat-label>
+      <input matInput type="number" formControlName="quantity">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Látogatás dátuma</mat-label>
+      <input matInput type="date" formControlName="visitDate">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ár</mat-label>
+      <input matInput formControlName="price" readonly>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!ticketForm.valid">Jegy vásárlása</button>
+  </form>
+</div>

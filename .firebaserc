@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "muzeum-app-52085": {
+      "hosting": {
+        "muzeum-belepojegy-app": [
+          "muzeum-app-52085"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "muzeum-app-52085"
+  }
+}

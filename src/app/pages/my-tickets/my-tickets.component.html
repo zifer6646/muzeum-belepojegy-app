@@ -1,0 +1,13 @@
+<!-- my-tickets.component.html -->
+<div class="my-tickets-container">
+  <div *ngIf="tickets$ | async as tickets; else noTickets">
+    <ul>
+      <li *ngFor="let ticket of tickets">
+        <!-- Button to delete a ticket -->
+        <button (click)="deleteTicket(ticket.id)">Delete</button>
+        Jegy típus: {{ ticket.type }} - {{ ticket.quantity }}db, kiállítás: {{ticket.exhibitId}}
+      </li>
+    </ul>
+  </div>
+  <ng-template #noTickets>No tickets found.</ng-template>
+</div>

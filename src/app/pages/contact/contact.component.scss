@@ -1,0 +1,38 @@
+/* Alapvető konténer stílusok a kártya középre helyezéséhez */
+.main_component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ece7f2; /* A téma lila árnyalatához közelítő háttérszín */
+    margin: 0; /* Eltávolítottuk a margót, hogy az egész oldal konzisztens legyen */
+    padding: 0; /* Eltávolítottuk a paddingot az egységesítés érdekében */
+}
+
+/* A mat-card komponens stílusának beállítása */
+mat-card {
+    width: 40%; /* Megfelelő szélesség a tartalom megjelenítéséhez */
+    height: auto; /* Automatikus magasság a tartalomhoz igazodva */
+    margin: 2% auto; /* Felső és alsó margó beállítása, középre igazítás */
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    background-color: #f8f8fa;
+}
+
+/* A mat-card-header alapértelmezett stílusának felülírása */
+mat-card-header {
+    display: block; /* A 'initial' helyett 'block', ha szükséges több kontroll */
+}
+
+/* Szövegek és ikonok színeinek és elrendezésének kiemelése */
+.mat-card-title, .mat-icon {
+    color: #5e35b1; /* Erőteljes lila szín, egységes a téma színeivel */
+}
+
+/* A felhasználói profil információk konténere */
+.profile-info p {
+    margin: 10px 0; /* Kis margó minden p elemhez, hogy jobban elkülönüljenek */
+}
